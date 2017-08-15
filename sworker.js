@@ -1,24 +1,22 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
-  '/app.config.js',
-  '/app.module.js',
-  '/channel.controller.js',
-  '/channel.service.js',
-  '/news.latest.controller.js',
-  '/news.popular.controller.js',
-  '/news.top.controller.js',
-  '/part.controller.js',
-  '/sidebar.controller.js',
-  '/a.html',
-  '/index.html',
-  '/latest.html',
-  '/part.html',
-  '/popular.html',
-  '/top.html'
-  '/a.jpg',
-
-
+  'app.config.js',
+  'app.module.js',
+  'channel.controller.js',
+  'channel.service.js',
+  'news.latest.controller.js',
+  'news.popular.controller.js',
+  'news.top.controller.js',
+  'part.controller.js',
+  'sidebar.controller.js',
+  'a.html',
+  'index.html',
+  'latest.html',
+  'part.html',
+  'popular.html',
+  'top.html',
+  'icon.png',
 ];
 
 self.addEventListener('install', function(event) {

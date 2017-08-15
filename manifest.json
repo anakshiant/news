@@ -1,14 +1,14 @@
 {
-  "short_name": "zero cut",
-  "name": "Kinlan's AirHorner of Infamy",
+  "short_name": "Aim News",
+  "name": "News app by anakshiant",
   "icons": [
     {
-      "src": "av.ico",
+      "src": "icon.ico",
       "type": "image/ico",
       "sizes": "48x48"
     },
     {
-      "src": "av.ico",
+      "src": "icon.png",
       "type": "image/ico",
       "sizes": "96x96"
     },
