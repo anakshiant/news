@@ -1,0 +1,40 @@
+<style type="text/css">
+	div{
+		font-family: roboto;
+	}
+</style>
+
+<div ng-controller="topNews">
+	<div ng-if="!articles">
+		<div ng-if="!error">
+			<center><h2>Loading..</h2></center>
+		</div>
+		<div ng-if="error">
+			<center><h2>no top news</h2></center>
+		</div>
+	</div>
+	
+
+	<div class="mdl-grid mdl-grid--no-spacing">
+		<div ng-repeat="article in articles">
+		<div class="mdl-cell">
+			<div class="mdl-card mdl-shadow--4dp">
+				<div class="mdl-card__title">
+					<div class="mdl-card__title-text">{{article.title}}</div>
+				</div>
+				<div class="mdl-card__media">
+					<img ng-src="{{article.urlToImage}}" style="height: 200px;width: 100%" />
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>{{article.description}}</p>
+					<b>{{article.author}}</b>
+				</div>
+				<div class="mdl-card__actions">
+					{{article.publishedAt|date}}
+					<a href="{{article.url}}" class="mdl-button">more</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>

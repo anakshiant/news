@@ -1,0 +1,58 @@
+<style type="text/css">
+	div{
+		font-family: roboto;
+	}
+	.demo-chip1{
+		background:#F44336;
+		color:white;
+	}
+	.demo-chip2{
+		background:#E91E63;
+		color:white;
+	}
+	.demo-chip3{
+		background:#00BCD4;
+		color:white;
+	}
+</style>
+<br/><br/>
+<div ng-controller="channel">
+	<div ng-if="!channels">
+		<center><h2>Loading..</h2></center>
+	</div>
+	<div class="mdl-grid mdl-grid--no-spacing">
+		<div ng-repeat="channel in channels">
+			<div class="mdl-cell mdl-cell--4-phone mdl-cell--6-tablet">
+				<div class="mdl-card mdl-shadow--4dp">
+					<div class="mdl-card__title">
+						<div class="mdl-card__title-text">{{channel.name}}</div>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>{{channel.description}}</p>
+						<span class="mdl-chip">
+							<span class="mdl-chip__text"><b>#{{channel.category}}</b></span>
+						</span>
+					</div>
+					<div class="mdl-card__actions">
+						<span class="mdl-chip demo-chip1">
+						    <span class="mdl-chip__text">Top</span>
+						    <a href="#!/channel/top/{{channel.id}}" class="mdl-chip__action"><i class="material-icons">more</i></a>
+						</span>
+						<span class="mdl-chip demo-chip2">
+						    <span class="mdl-chip__text">Latest</span>
+						    <a href="#!/channel/latest/{{channel.id}}" class="mdl-chip__action"><i class="material-icons">more</i></a>
+						</span>
+						<span class="mdl-chip demo-chip3">
+						    <span class="mdl-chip__text">Popular</span>
+						    <a href="#!/channel/popular/{{channel.id}}" class="mdl-chip__action"><i class="material-icons">more</i></a>
+						</span>
+					</div>
+				</div> 
+				
+			</div>
+			<br/>
+		</div>
+	</div>
+</div>
+

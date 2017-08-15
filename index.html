@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aim</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@font-face{
+			font-family:roboto;
+			src:url(material/fonts/Roboto-Black.ttf);
+		}
+		body{
+			font-family:roboto;
+		}
+	</style>
+	<link rel="icon" href="av.ico"/>
+	<link rel="manifest" href="manifest.json"/>
+	<link rel="stylesheet" type="text/css" href="./material/material.min.css">
+		<link rel="stylesheet" type="text/css" href="./material/materiala.min.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body ng-app="aim">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header ">
+		<header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--waterfall-hide-top  mdl-shadow--6dp" style="background: #F44336" ng-controller="backs">
+			<div class="mdl-layout-icon"></div>
+			<div class="mdl-layout__header-row">
+				<div class="mdl-layout__title"><i class="material-icons">signal_cellular_null</i> aim news</div>
+				<div class="mdl-layout-spacer"></div>
+				<button class="mdl-button" ng-click="backa()"><svg fill="white" height="24"  viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></button>
+			</div>
+			
+		</header>
+		<div class="mdl-layout__drawer" ng-controller="sidebar">
+			<img src="cover.png" style="width: 100%;height:200px">
+			<nav class="mdl-navigation">
+					<a href="#!/channel" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
+					<a href="#!/channel/top/{{channel.id}}" ng-repeat="channel in channels.list" class="mdl-navigation__link">{{channel.name}}</a>
+					<!-- <a href="" class="mdl-navigation__link">{{channels.list}}</a> -->
+			</nav>
+		</div>
+		<main class="mdl-layout__content">
+
+    
+
+			<div class="page-content" ng-view>
+				
+			</div>
+			
+		</main>
+		
+	</div>
+
+</body>
+<script type="text/javascript" src="material/material.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+
+<script type="text/javascript" src="app.module.js"></script>
+<script type="text/javascript" src="app.config.js"></script>
+<script type="text/javascript" src="channel.service.js"></script>
+<script type="text/javascript" src="channel.controller.js"></script>
+<script type="text/javascript" src="news.top.controller.js"></script>
+<script type="text/javascript" src="news.latest.controller.js"></script>
+<script type="text/javascript" src="news.popular.controller.js"></script>
+<script type="text/javascript" src="sidebar.controller.js"></script>
+<script type="text/javascript" src="part.controller.js"></script>
+<script type="text/javascript">
+	angular.module('aim').controller('backs',function($scope){
+		$scope.backa=function(){
+			window.history.back();
+		}
+	});
+</script>
+<script type="text/javascript" src="sworker_registeration.js"></script>
+
+
+</html>
