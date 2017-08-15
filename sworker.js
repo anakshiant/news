@@ -16,9 +16,7 @@ var urlsToCache = [
   '/part.html',
   '/popular.html',
   '/top.html'
-  '/a.jpg',
-
-
+  '/a.jpg'
 ];
 
 self.addEventListener('install', function(event) {
