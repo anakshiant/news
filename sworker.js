@@ -15,7 +15,7 @@ var urlsToCache = [
   '/latest.html',
   '/part.html',
   '/popular.html',
-  '/top.html'
+  '/top.html',
   '/a.jpg'
 ];
 
